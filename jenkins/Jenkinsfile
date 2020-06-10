@@ -38,6 +38,7 @@ pipeline {
                         stage('Dummy build'){
                             steps{
                                 // Testing for parallel
+                                sh "echo Mock build"
                             }
                         }
                         }
