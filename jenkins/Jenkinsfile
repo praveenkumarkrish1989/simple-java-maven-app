@@ -6,8 +6,10 @@ pipeline {
         }
     }
     stages {
-        stage('Parallel Stage Build') {
+    stage('Parallel Stage Build') {
             parallel {
+                stage('Maven build') {
+    stages {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
@@ -29,6 +31,17 @@ pipeline {
             }
         }
             }
+                }
+            }
+          stage('Mock build')
+                    stages{
+                        stage('Dummy build'){
+                            steps{
+                                // Testing for parallel
+                            }
+                        }
+                    }
         }
     }
+}
 }
