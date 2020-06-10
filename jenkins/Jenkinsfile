@@ -33,12 +33,13 @@ pipeline {
             
                 }
             }
-          stage('Mock build')
+                stage('Mock build') {
                     stages{
                         stage('Dummy build'){
                             steps{
                                 // Testing for parallel
                             }
+                        }
                         }
                     }
             }
