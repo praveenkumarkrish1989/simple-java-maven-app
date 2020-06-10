@@ -30,7 +30,7 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
-            }
+            
                 }
             }
           stage('Mock build')
@@ -41,6 +41,7 @@ pipeline {
                             }
                         }
                     }
-        }
+            }
+            }
     }
 }
